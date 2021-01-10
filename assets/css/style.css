@@ -29,6 +29,51 @@
           transform: translate(-200px, 150px);
 }
 
+.obj-scale {
+  -webkit-animation: fadeInScale .3s forwards;
+          animation: fadeInScale .3s forwards;
+}
+
+@-webkit-keyframes fadeInScale {
+  0% {
+  }
+  80% {
+    -webkit-transform: scale(0.85, 0.85);
+            transform: scale(0.85, 0.85);
+    border-radius: 30px;
+  }
+  100% {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+    opacity: .75;
+    border-radius: 30px;
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+  }
+  80% {
+    -webkit-transform: scale(0.85, 0.85);
+            transform: scale(0.85, 0.85);
+    border-radius: 30px;
+  }
+  100% {
+    -webkit-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+    opacity: .75;
+    border-radius: 30px;
+  }
+}
+
+.p-lesson-info__text.text-slide {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
 @-webkit-keyframes fadein-arrow {
   0% {
     opacity: 1;
@@ -75,7 +120,7 @@ html {
 }
 
 .wrapper {
-  color: #787878;
+  color: #646464;
   overflow: hidden;
   width: 100%;
   margin: 0 auto;
@@ -101,6 +146,8 @@ header {
   height: 90px;
   width: 100%;
   margin: 0 auto;
+  -webkit-box-shadow: 0 0 3px #323232;
+          box-shadow: 0 0 3px #323232;
 }
 
 .h-header {
@@ -125,11 +172,23 @@ header {
 }
 
 .m-school__head {
-  margin-bottom: 10em;
+  margin-bottom: 6em;
+}
+
+@media screen and (max-width: 425px) {
+  .m-school__head {
+    margin-bottom: 3em;
+  }
 }
 
 .m-school__intro {
-  margin-bottom: 6em;
+  margin-bottom: 5em;
+}
+
+@media screen and (max-width: 425px) {
+  .m-school__intro {
+    margin-bottom: 0em;
+  }
 }
 
 .m-about {
@@ -192,29 +251,24 @@ header {
 
 /*コンポーネント*/
 .c-container {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 993px) {
   .c-container {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 281px) {
-  .c-container {
-    width: 280px;
+    max-width: none;
+    width: 96%;
   }
 }
 
 .c-block {
-  padding: 80px 0;
+  padding: 4rem 0;
 }
 
 @media screen and (max-width: 993px) {
   .c-block {
-    padding: 40px 0;
+    padding: 2.5rem  0;
   }
 }
 
@@ -244,7 +298,7 @@ header {
   color: #323232;
   font-weight: 900;
   font-size: 1.8rem;
-  margin-bottom: 5em;
+  margin-bottom: 3em;
 }
 
 .c-head__text::before, .c-head__text::after {
@@ -256,7 +310,7 @@ header {
 
 @media screen and (max-width: 768px) {
   .c-head__text {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
   }
 }
 
@@ -274,7 +328,7 @@ header {
 
 .c-info__text {
   font-size: 1.6rem;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   line-height: 1.8;
 }
 
@@ -531,15 +585,29 @@ header {
 .c-form {
   font-size: 1.8rem;
   width: 80%;
-  margin: 0 10%;
+  margin: 0 10% 1em;
   border: 1px solid whitesmoke;
-  padding: 2em 0.5em;
-  margin-bottom: 1em;
+  padding: 1.5em .5em;
+}
+
+@media screen and (max-width: 425px) {
+  .c-form {
+    font-size: 1.4rem;
+    width: 90%;
+    padding: 1em .5em;
+    margin: 0 5% .5em;
+  }
 }
 
 .c-form:last-child {
   padding: 2em 0.5em 5em 0.5em;
   margin-bottom: 2.5em;
+}
+
+@media screen and (max-width: 425px) {
+  .c-form:last-child {
+    padding: 1em .5em 5em;
+  }
 }
 
 /*プロジェクト*/
@@ -597,7 +665,6 @@ header {
   content: "";
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   z-index: 10;
@@ -614,7 +681,6 @@ header {
   content: "";
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   z-index: 10;
@@ -631,7 +697,6 @@ header {
   content: "";
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   z-index: 10;
@@ -648,7 +713,6 @@ header {
   content: "";
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   z-index: 10;
@@ -689,8 +753,8 @@ header {
 }
 
 .p-school-intro__image {
-  -webkit-transition: all 1.2s ease-out;
-  transition: all 1.2s ease-out;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
   width: 400px;
   height: 400px;
   overflow: hidden;
@@ -718,8 +782,8 @@ header {
 }
 
 .p-school-intro__text {
-  -webkit-transition: all 1.2s ease-out;
-  transition: all 1.2s ease-out;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
   background-color: rgba(255, 255, 255, 0.9);
   width: 50%;
   padding: 3em;
@@ -771,22 +835,34 @@ header {
   margin-bottom: 5rem;
 }
 
+@media screen and (max-width: 425px) {
+  .p-about-image {
+    margin-bottom: 2rem;
+  }
+}
+
 .p-about-image__coach {
-  background: url("../images/ffffff.jpg") center/cover no-repeat;
-  width: 280px;
-  height: 210px;
+  background: url("../images/coach.jpg") center/cover no-repeat;
+  width: 500px;
+  height: 390px;
   margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .p-about-image__coach {
-    width: 250px;
-    height: 185px;
+    width: 280px;
+    height: 224px;
   }
 }
 
 .p-about-info {
   margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 425px) {
+  .p-about-info {
+    margin-bottom: 2rem;
+  }
 }
 
 .p-about-btn {
@@ -889,7 +965,7 @@ header {
 }
 
 .p-lesson-wrap__section {
-  height: 60rem;
+  height: 80rem;
   width: 33.33%;
   -webkit-transition: all .3s .3s;
   transition: all .3s .3s;
@@ -907,53 +983,9 @@ header {
   background: url("../images/guitar_03.jpg") center/cover no-repeat;
 }
 
-@-webkit-keyframes fadeInScale {
-  0% {
-  }
-  80% {
-    -webkit-transform: scale(0.85, 0.85);
-            transform: scale(0.85, 0.85);
-    border-radius: 30px;
-  }
-  100% {
-    -webkit-transform: scale(0.9, 0.9);
-            transform: scale(0.9, 0.9);
-    opacity: .75;
-    border-radius: 30px;
-  }
-}
-
-@keyframes fadeInScale {
-  0% {
-  }
-  80% {
-    -webkit-transform: scale(0.85, 0.85);
-            transform: scale(0.85, 0.85);
-    border-radius: 30px;
-  }
-  100% {
-    -webkit-transform: scale(0.9, 0.9);
-            transform: scale(0.9, 0.9);
-    opacity: .75;
-    border-radius: 30px;
-  }
-}
-
-.p-lesson-wrap__section:hover .p-lesson-section, .p-lesson-wrap__section:hover .p-lesson-info {
-  -webkit-animation: fadeInScale .3s forwards;
-          animation: fadeInScale .3s forwards;
-}
-
-.p-lesson-wrap__section:hover .p-lesson-info__text {
-  -webkit-transition: all .3s .2s;
-  transition: all .3s .2s;
-  opacity: 1;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-
 @media screen and (max-width: 768px) {
   .p-lesson-wrap__section {
+    height: 60rem;
     width: 100%;
   }
 }
@@ -1011,7 +1043,7 @@ header {
   height: calc(100% - 30%);
   background-color: rgba(255, 255, 255, 0.95);
   font-size: 1.8rem;
-  padding: 3em;
+  padding: 2em;
   font-weight: 900;
   border: 1px solid whitesmoke;
   color: #323232;
@@ -1022,19 +1054,13 @@ header {
 @media screen and (max-width: 768px) {
   .p-lesson-info {
     opacity: .75;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .p-lesson-info {
-    padding: 2em 1em;
     -webkit-transform: scale(0.9, 0.9);
             transform: scale(0.9, 0.9);
     border-radius: 30px;
   }
 }
 
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 425px) {
   .p-lesson-info {
     padding: 1em;
   }
@@ -1049,7 +1075,6 @@ header {
 .p-lesson-info__text {
   -webkit-transition: all .3s;
   transition: all .3s;
-  opacity: 0;
   -webkit-transform: translate(-30px, 0);
           transform: translate(-30px, 0);
 }
@@ -1175,6 +1200,12 @@ header {
   .p-table__row-data {
     padding: 2em 0;
   }
+}
+
+.p-table__attent {
+  padding: 1.5em;
+  text-align: right;
+  font-size: 1.2rem;
 }
 
 .p-comment-wrap__voice {
@@ -1355,6 +1386,32 @@ header {
           transform: rotate(180deg);
 }
 
+.p-form__career {
+  width: 80%;
+  margin: 0 10% 1em;
+}
+
+@media screen and (max-width: 425px) {
+  .p-form__career {
+    width: 90%;
+    margin: 0 5% .5em;
+  }
+}
+
+.p-career-wrap {
+  margin-right: 2em;
+}
+
+.p-career-wrap__text {
+  margin-bottom: 1em;
+  font-size: 1.8rem;
+}
+
+.p-career-wrap__radio {
+  font-size: 1.6rem;
+  margin: 0 .5em;
+}
+
 .p-form-btn {
   text-align: center;
 }
@@ -1477,7 +1534,6 @@ header {
 
 .p-scroll-icon__top {
   font-size: 3.2rem;
-  margin-bottom: 1em;
   position: fixed;
   bottom: 3%;
   right: 5%;
@@ -1494,6 +1550,12 @@ header {
 .p-scroll-icon__top:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
+}
+
+@media screen and (max-width: 425px) {
+  .p-scroll-icon__top {
+    font-size: 2.4rem;
+  }
 }
 
 .p-end-icon__line {
@@ -1533,3 +1595,4 @@ header {
 
 /*ユーティリティ*/
 /*# sourceMappingURL=style.css.map */
+
