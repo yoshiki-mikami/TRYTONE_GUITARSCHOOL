@@ -15,22 +15,18 @@ $(function () {
   });
 
   // 特定位置に来た時に、要素が出入りする
-  // $('header').hide();
-  const toggleAnimation = (toggleDom) => {
+  const toggleAnimation = (toggleElem) => {
     $(window).scroll(function () {
       if ($(this).scrollTop() > 1300) {
-        $(toggleDom).fadeIn(300);
+        $(toggleElem).fadeIn(300);
       } else {
-        $(toggleDom).fadeOut(300);
+        $(toggleElem).fadeOut(300);
       }
     });
   }
 
   toggleAnimation('header');
   toggleAnimation('#scrollIcon');
-  // メインビジュアルのフェードイン
-  // $('.m-mainvisual').fadeIn(500);
-
 
   // メインビジュアルのスライダーアニメーション
   $('.slider').slick({
@@ -43,30 +39,34 @@ $(function () {
 
 
   // スクロールに応じてフェードインする処理
-  $(window).scroll(() => {
-    // 繰り返し処理で各々処理させる
-    $('.fadein').each(function () {
-
-      // 変数定義(高さ指定系)
-      let scroll = $(window).scrollTop();
-      let fadeinHeight = $(this).offset().top;
-      let windowHeight = $(window).height();
-
-      // 高さに応じて、クラスを付与する
-      if (scroll > fadeinHeight - windowHeight + 200) {
-        $(this).addClass('scrollin');
-      } else {
-        // $(this).removeClass('scrollin');
-      }
+  const scrollFadeIn = (obj,addObj) => {
+    $(window).scroll(() => {
+      // 繰り返し処理で各々処理させる
+      $(obj).each(function () {
+        // 変数定義(高さ指定系)
+        let scroll = $(window).scrollTop();
+        let fadeinHeight = $(this).offset().top;
+        let windowHeight = $(window).height();
+        // 高さに応じて、クラスを付与する
+        if (scroll > fadeinHeight - windowHeight + 200) {
+          $(this).addClass(addObj);
+        }
+      });
     });
-  });
+  };
 
+  // addObjはaddClassの引数なので(.)が不要
+  scrollFadeIn('.fadein', 'scrollin');
+
+  // lessonセクションのホバーアニメーション
+  $('.p-lesson-wrap__section').mouseover(function () {
+    $('.p-lesson-section , .p-lesson-info').addClass('obj-scale');
+    $('.p-lesson-info__text').addClass('text-slide');
+  });
 
   // $('.p-lesson-wrap__section').hover(function () {
   //   $('')
   // });
-
-
 
   // スクロールアニメーション関数
   const scrollFunc = (scrollBtn, scrollNav, i) => {
