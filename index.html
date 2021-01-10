@@ -120,7 +120,7 @@
         <section class="m-school c-block" id="schoolSection">
           <div class="m-school__head fadein">
             <div class="p-school-head c-head">
-              <p class="p-school-head__title c-head__title">スクールについて</h3>
+              <p class="p-school-head__title c-head__title">スクール紹介</h3>
               <p class="p-school-head__text c-head__text">School</p>
             </div>
             <div class="p-school-info c-info">
@@ -357,9 +357,12 @@
                       <td class="p-table__row-data">¥18,000</td>
                     </tr>
                   </table>
+                  <div class="p-table__attent">
+                    <p>※１回のレッスンは１時間です。</p>
+                  </div>
                 </div>
                 <div class="c-info p-price-item__info">
-                  <div class=" p-price-item__text">
+                  <div class="p-price-item__text">
                     <p>ご来店いただきますと料金がお安くなります。ご要望などございましたら、お気軽にご連絡ください。</p>
                   </div>
                   <div class="p-price-item__btn contactScroll">
@@ -374,60 +377,6 @@
           </div>
         </div>
       </section><!-- m-price -->
-
-      <!-- <div class="c-container">
-        <section id="customerSection" class="m-customer c-block">
-          <div class="m-customer__head fadein">
-            <div class="p-customer-head c-head">
-              <h3 class="p-customer-head__title c-head__title">受講生の声</h3>
-              <p class="p-customer-head__text c-head__text">受講いただいた方のコメントを掲載しています。</p>
-            </div>
-          </div>
-          <div class="m-customer__comment">
-            <div class="p-comment-wrap">
-              <div class="p-comment-wrap__voice fadein">
-                <div class="p-comment-image">
-                  <img class="p-comment-image__logo" src="./assets/images/man.svg" alt="お客様画像">
-                </div>
-                <div class="c-info p-comment-info">
-                  <p class="p-comment-info__name">
-                    ○○歳　男性　サラリーマンの方
-                  </p>
-                  <p class="c-info__text p-comment-info__text">高校では軽音楽部に所属し、友だちとバンドを組んでいました。僕のギターは、完全に独学でしたね。その後、しばらくギターからは離れていたのですが、社会人でも継続してできる趣味を持ちたいと思った時、またギターをやりたい！そして今度は習いたいという思いが湧いてきたのです。仕事の忙しい僕でも大人の趣味としてギターを続けられる！そう思ったのです。</p>
-
-                </div>
-              </div>
-              <div class="p-comment-wrap__voice fadein">
-                <div class="c-info p-comment-info">
-                  <p class="p-comment-info__name">
-                    ○○歳　女性　主婦の方
-                  </p>
-                  <p class="c-info__text p-comment-info__text">習い始めて4カ月、正直ギターはもっと簡単なものだとタカをくくっていました（笑）。きれいな音がなかなか思うように出ないので、最初は戸惑いの連続。でも先生がやさしくわかりやすく教えてくれました。夫を驚かせたくてこっそり家で練習もします。1週間家事ををがんばった後に来る金曜日のレッスンがいつも待ち遠しい私。今はまだ弾けるコードも少ないですが、いつか弾き語りができるようになりたいです！</p>
-
-                </div>
-                <div class="p-comment-image">
-                  <img class="p-comment-image__logo" src="./assets/images/woman.svg" alt="お客様画像">
-                </div>
-              </div>
-              <div class="p-comment-wrap__voice fadein">
-                <div class="p-comment-image">
-                  <img class="p-comment-image__logo" src="./assets/images/owner.svg" alt="お客様画像">
-                </div>
-                <div class="c-info p-comment-info">
-                  <p class="p-comment-info__name">
-                    ○○歳　男性　自営業の方
-                  </p>
-                  <p class="c-info__text p-comment-info__text">仕事漬けの日々、新たな趣味を持とうとこの教室に通い始めました。
-                  まったくの初心者で、仕事での負荷もかなり高いので続くか不安でしたが、親切でレベルに合わせた講師の指導や、柔軟なスケジューリングのお陰で継続でき、曲を弾けるまでになりました。
-                  個人レッスンなので、自分のペースで学べます。
-                  駅チカでアクセスも良いので、オススメの教室です。</p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div> -->
 
       <section id="faqSection" class="m-faq c-block">
         <div class="c-container">
@@ -478,12 +427,30 @@
             </div>
           </div>
           <div class=" m-contact__form fadein">
-            <div class="p-form">
+            <form class="p-form">
               <input type="text" placeholder="姓" class="c-form p-form__name">
               <input type="text" placeholder="名" class="c-form p-form__name">
+              <input type="text" placeholder="電話番号" class="c-form p-form__number">
               <input type="text" placeholder="メールアドレス" class="c-form p-form__mail">
-              <textarea type="text" placeholder="その他質問など（空欄でもOKです）" row=1 class="c-form p-form__text"></textarea>
-            </div>
+              <div class="p-form__career">
+                <div class="p-career-wrap">
+                  <p class="p-career-wrap__text">楽器歴</p>
+                </div>
+                <label class="p-career-wrap">
+                  <input class="p-career-wrap__radio" type="radio" name="career" value="初心者">初心者
+                </label>
+                <label class="p-career-wrap">
+                  <input class="p-career-wrap__radio" type="radio" name="career" value="〜半年">〜半年
+                </label>
+                <label class="p-career-wrap">
+                  <input class="p-career-wrap__radio" type="radio" name="career" value="半年〜１年" checked>半年〜1年
+                </label>
+                <label class="p-career-wrap">
+                  <input class="p-career-wrap__radio" type="radio" name="career" value="1年以上">1年以上
+                </label>
+              </div>
+              <textarea type="text" placeholder="教わりたいことや弾きたい曲、その他のご質問（空欄でもOKです）" row=1 class="c-form p-form__text"></textarea>
+            </form>
             <div class="p-form-btn">
               <button class="c-blue-btn p-form-btn__btn">送信</button>
             </div>
