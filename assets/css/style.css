@@ -159,16 +159,13 @@ header {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 /*メインカラム*/
 .m-mainvisual__wrap {
   position: relative;
   height: 100vh;
+  margin-bottom: 8rem;
 }
 
 .m-school__head {
@@ -277,7 +274,7 @@ header {
 }
 
 .c-head__title {
-  color: #00518d;
+  color: #323232;
   display: inline-block;
   font-size: 4rem;
   padding: 1em 0.5em;
@@ -315,7 +312,7 @@ header {
 }
 
 .c-info {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
   word-break: break-all;
 }
@@ -327,8 +324,8 @@ header {
 }
 
 .c-info__text {
-  font-size: 1.6rem;
-  letter-spacing: 2px;
+  font-size: 1.8rem;
+  letter-spacing: .3em;
   line-height: 1.8;
 }
 
@@ -612,8 +609,8 @@ header {
 
 /*プロジェクト*/
 .p-header-image {
-  display: inline-block;
   width: 90px;
+  overflow: hidden;
 }
 
 .p-header-nav__toc {
@@ -628,8 +625,8 @@ header {
 }
 
 .p-header-toc {
-  padding: 3em 1em;
-  font-size: 1.2rem;
+  padding: 2.7em 1em;
+  font-size: 1.4rem;
   letter-spacing: 2px;
   -webkit-transition: .3s;
   transition: .3s;
@@ -1096,11 +1093,11 @@ header {
 .p-price-item {
   background: url("../images/wolf_02.jpg") center/cover no-repeat;
   height: auto;
-  color: #fafafa;
   font-weight: 900;
   padding: 3em 0;
   font-size: 2rem;
   position: relative;
+  color: #fafafa;
 }
 
 .p-price-item::before {
@@ -1121,9 +1118,15 @@ header {
 
 .p-price-item__table {
   text-align: center;
-  width: 58%;
+  width: 60%;
   margin: 0 auto;
   padding-bottom: 3em;
+}
+
+@media screen and (max-width: 993px) {
+  .p-price-item__table {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1162,6 +1165,7 @@ header {
 
 .p-table {
   text-align: center;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -1190,6 +1194,11 @@ header {
   .p-table__row-head {
     padding: 2em 0;
   }
+}
+
+.p-table__column {
+  padding: .5em;
+  line-height: 1.5;
 }
 
 .p-table__row-data {
@@ -1593,6 +1602,107 @@ header {
   padding: 30px 0;
 }
 
+.p-side-wrap {
+  display: none;
+  width: 200px;
+  padding: 2em;
+  position: fixed;
+  bottom: 10%;
+  left: 2%;
+  background: #fafafa;
+  -webkit-box-shadow: 0 0 10px #323232;
+          box-shadow: 0 0 10px #323232;
+}
+
+@media screen and (max-width: 768px) {
+  .p-side-wrap {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .p-side-wrap {
+    position: static;
+    bottom: none;
+    left: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 70%;
+    margin: 0 auto 2em;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .p-side-wrap {
+    width: 100%;
+  }
+}
+
+.p-side-wrap__twi {
+  margin-bottom: 1em;
+}
+
+.p-side-wrap__line {
+  width: 100%;
+}
+
+.p-side-twi {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.p-side-twi__logo {
+  width: 35%;
+}
+
+.p-side-twi__arrow {
+  width: 10%;
+}
+
+.p-side-twi__text {
+  color: #fafafa;
+  width: 45%;
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  text-align: center;
+  text-shadow: 1px 1px 6px #787878, 1px 1px 6px #787878, 1px -1px 6px #787878, -1px -1px 6px #787878;
+}
+
+@media screen and (max-width: 425px) {
+  .p-side-twi__text {
+    font-size: 2.4rem;
+  }
+}
+
+.p-background-logo {
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  -webkit-transform: 0, 60px;
+          transform: 0, 60px;
+  -webkit-box-shadow: 0 0 10px 1px #787878;
+          box-shadow: 0 0 10px 1px #787878;
+}
+
+.p-background-logo::before {
+  content: "";
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.5);
+}
+
 /*ユーティリティ*/
 /*# sourceMappingURL=style.css.map */
-
