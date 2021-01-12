@@ -27,7 +27,9 @@ $(function () {
 
   toggleAnimation('header');
   toggleAnimation('#scrollIcon');
+  toggleAnimation('.p-side-wrap');
 
+  
   // メインビジュアルのスライダーアニメーション
   $('.slider').slick({
     fade: true,
