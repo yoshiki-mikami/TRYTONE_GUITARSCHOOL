@@ -1362,11 +1362,6 @@ header {
   }
 }
 
-.p-faq-list__question:hover {
-  -webkit-box-shadow: 0px 0px 5px 0px #00518d;
-          box-shadow: 0px 0px 5px 0px #00518d;
-}
-
 @media screen and (max-width: 768px) {
   .p-faq-list__question {
     font-size: 1.4rem;
@@ -1386,6 +1381,11 @@ header {
   .p-faq-list__answer {
     font-size: 1.4rem;
   }
+}
+
+.faq-question-active {
+  -webkit-box-shadow: 0px 0px 5px 0px #00518d;
+          box-shadow: 0px 0px 5px 0px #00518d;
 }
 
 .faq-answer-active::after {
@@ -1603,7 +1603,6 @@ header {
 }
 
 .p-side-wrap {
-  display: none;
   width: 200px;
   padding: 2em;
   position: fixed;
