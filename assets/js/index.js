@@ -12,6 +12,13 @@ $(function () {
   $('#slideBar .p-faq-list__question').on('click', function () {
     $(this).next().slideToggle(350);
     $(this).toggleClass('faq-answer-active');
+    // $('.p-faq-list__question').toggleClass('faq-question-active');
+  });
+
+  // FAQのスタイル追加
+  $('.p-faq-list__question').click(function(){
+    $(this).toggleClass('faq-question-active');
+
   });
 
   // 特定位置に来た時に、要素が出入りする
@@ -27,9 +34,21 @@ $(function () {
 
   toggleAnimation('header');
   toggleAnimation('#scrollIcon');
-  toggleAnimation('.p-side-wrap');
 
-  
+  // 特定位置２つの間に来たときに要素が出入りする
+  const sideToggle = (sideDom, point_01, point_02) => {
+    $(sideDom).hide();
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > $(point_01).offset().top && $(this).scrollTop() < $(point_02).offset().top - $(window).height()) {
+        $(sideDom).fadeIn(300);
+      } else {
+        $(sideDom).fadeOut(300);
+      }
+    });
+  }
+
+  sideToggle('.p-side-wrap', '.m-school', '.m-lesson' );
+
   // メインビジュアルのスライダーアニメーション
   $('.slider').slick({
     fade: true,
