@@ -305,7 +305,7 @@ header {
   padding: 0 .5em;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .c-head__text {
     margin-bottom: 2em;
   }
@@ -317,7 +317,7 @@ header {
   word-break: break-all;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .c-info {
     width: 90%;
   }
@@ -469,7 +469,7 @@ header {
   z-index: 10;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .c-modal__btn {
     display: block;
   }
@@ -625,7 +625,7 @@ header {
 }
 
 .p-header-toc {
-  padding: 2.7em 1em;
+  padding: 2.7em .8em;
   font-size: 1.4rem;
   letter-spacing: 2px;
   -webkit-transition: .3s;
@@ -639,7 +639,7 @@ header {
   transition: .3s;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-header-toc {
     display: none;
   }
@@ -731,6 +731,13 @@ header {
   }
 }
 
+.p-school-info__text li {
+  font-weight: 900;
+  margin-bottom: .5em;
+  margin-left: 1em;
+  list-style: square;
+}
+
 .p-school-intro {
   display: -webkit-box;
   display: -webkit-flex;
@@ -755,12 +762,7 @@ header {
   width: 400px;
   height: 400px;
   overflow: hidden;
-}
-
-@media screen and (max-width: 768px) {
-  .p-school-intro__image {
-    margin: 0 auto;
-  }
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 425px) {
@@ -786,7 +788,7 @@ header {
   padding: 3em;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 993px) {
   .p-school-intro__text {
     width: 90%;
     margin: 0 auto;
@@ -800,7 +802,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 993px) {
   .p-school-intro02 {
     -webkit-flex-wrap: wrap-reverse;
         -ms-flex-wrap: wrap-reverse;
@@ -894,14 +896,14 @@ header {
           transition-delay: .3s;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-youtube__movie:nth-of-type(2n) {
     -webkit-transition-delay: initial;
             transition-delay: initial;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-youtube__movie {
     width: 70%;
     margin: 0 auto 4rem;
@@ -952,7 +954,7 @@ header {
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 993px) {
   .p-lesson-wrap {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -980,7 +982,7 @@ header {
   background: url("../images/guitar_03.jpg") center/cover no-repeat;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 993px) {
   .p-lesson-wrap__section {
     height: 60rem;
     width: 100%;
@@ -1003,7 +1005,7 @@ header {
   transition: transform .3s, -webkit-transform .3s;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 993px) {
   .p-lesson-section {
     -webkit-transform: scale(0.9, 0.9);
             transform: scale(0.9, 0.9);
@@ -1040,7 +1042,7 @@ header {
   height: calc(100% - 30%);
   background-color: rgba(255, 255, 255, 0.95);
   font-size: 1.8rem;
-  padding: 2em;
+  padding: 1.5em;
   font-weight: 900;
   border: 1px solid whitesmoke;
   color: #323232;
@@ -1048,7 +1050,7 @@ header {
           transform: scale(1, 1);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 993px) {
   .p-lesson-info {
     opacity: .75;
     -webkit-transform: scale(0.9, 0.9);
@@ -1076,7 +1078,7 @@ header {
           transform: translate(-30px, 0);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 993px) {
   .p-lesson-info__text {
     opacity: 1;
     -webkit-transform: translate(0, 0);
@@ -1129,7 +1131,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-price-item__table {
     width: 100%;
   }
@@ -1141,7 +1143,7 @@ header {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-price-item__info {
     width: 70%;
   }
@@ -1168,7 +1170,7 @@ header {
   width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-table {
     margin: 0 auto;
     width: 90%;
@@ -1236,7 +1238,7 @@ header {
   border-left: 10px double #00518d;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-comment-wrap__voice:nth-of-type(1) {
     border: none;
     padding: initial;
@@ -1251,7 +1253,7 @@ header {
   padding-right: 2em;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-comment-wrap__voice:nth-of-type(2) {
     border: none;
     padding: initial;
@@ -1264,7 +1266,7 @@ header {
   margin-bottom: initial;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-comment-wrap__voice:nth-of-type(3) {
     border: none;
     padding: initial;
@@ -1277,7 +1279,7 @@ header {
   max-width: 200px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-comment-image {
     width: 50%;
   }
@@ -1294,7 +1296,7 @@ header {
   margin: initial;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-comment-info {
     padding-top: 30px;
     width: 90%;
@@ -1307,7 +1309,7 @@ header {
   padding: 2em 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-comment-info__name {
     display: inline-block;
     border-bottom: 4px double #00518d;
@@ -1343,6 +1345,16 @@ header {
   transition: box-shadow .3s, -webkit-box-shadow .3s;
 }
 
+.p-faq-list__question::before {
+  content: '';
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  background-image: url("../images/Q_icon.svg");
+  background-size: contain;
+  margin-right: 1em;
+}
+
 .p-faq-list__question::after {
   position: absolute;
   top: 40%;
@@ -1362,7 +1374,7 @@ header {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-faq-list__question {
     font-size: 1.4rem;
   }
@@ -1377,7 +1389,17 @@ header {
   font-size: 1.8rem;
 }
 
-@media screen and (max-width: 768px) {
+.p-faq-list__answer::before {
+  content: '';
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  background-image: url("../images/A_icon.svg");
+  background-size: contain;
+  margin-right: 1em;
+}
+
+@media screen and (max-width: 767px) {
   .p-faq-list__answer {
     font-size: 1.4rem;
   }
@@ -1434,7 +1456,7 @@ header {
   margin-right: 20%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-place-item {
     width: 90%;
     margin: 0 auto 3em;
@@ -1457,12 +1479,12 @@ header {
 }
 
 .p-place-info {
-  width: 30%;
-  margin: 0 auto;
+  width: 35%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-place-info {
+    margin: 0 auto;
     width: 50%;
   }
 }
@@ -1475,6 +1497,7 @@ header {
 
 .p-place-info__text {
   line-height: 2;
+  letter-spacing: .2em;
   font-size: 1.6rem;
   text-align: initial;
   padding-bottom: 1em;
@@ -1531,7 +1554,7 @@ header {
   width: 250px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-f-logo-wrap {
     width: 50%;
   }
@@ -1613,7 +1636,7 @@ header {
           box-shadow: 0 0 10px #323232;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .p-side-wrap {
     width: 150px;
   }
